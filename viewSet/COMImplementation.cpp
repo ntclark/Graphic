@@ -74,7 +74,7 @@
   }
 
 
-  STDAPI DllRegisterServer() {	
+  STDAPI DllRegisterServer() {
   return utilsDllRegisterObject(CLSID_ViewSet,LIBID_ViewSet,hModule,szModuleName,"InnoVisioNate ViewSet Object","InnoVisioNate.ViewSet","InnoVisioNate.ViewSet.1",(CATID*)NULL,0,0,false,true,true);
   }
 

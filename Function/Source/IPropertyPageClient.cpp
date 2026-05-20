@@ -55,6 +55,12 @@
    return E_NOTIMPL;
    }
 
+
+   HRESULT Function::TakePropertySheetDialogs(SAFEARRAY *) {
+   return E_NOTIMPL;
+   }
+
+
    HRESULT Function::GetPropertySheetHeader(void *pv) {
    
    if ( ! pv )

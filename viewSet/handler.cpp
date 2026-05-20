@@ -1,6 +1,3 @@
-// Copyright 2018 InnoVisioNate Inc. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
 
 #include "ViewSet.h"
 
@@ -41,6 +38,7 @@
 
    case WM_VSCROLL:
    case WM_HSCROLL: {
+
       if ( ! p ) break;
 
       RECT rectDialog,rectItem,rectBar,rectEntryField;
@@ -55,13 +53,14 @@
          long controlID = (long)GetWindowLongPtr(hwndBar,GWLP_ID);
 
          switch ( controlID ) {
+
          case IDDI_VIEWSET_PHISET: {
 
             long y;
 
             p -> parentPropertyPhi -> put_doubleValue(90.0 - (double)pos);
 
- 		      if ( ! holdTextUpdate ) {
+            if ( ! holdTextUpdate ) {
                sprintf(szTemp,"%4.1f",90.0 - (double)pos);
                SetWindowText(GetDlgItem(hwnd,IDDI_VIEWSET_PHITEXT),szTemp);
             }
@@ -74,12 +73,14 @@
             GetWindowRect(GetDlgItem(hwnd,IDDI_VIEWSET_PHITEXT),&rectEntryField);
 
             GetWindowRect(GetDlgItem(hwnd,IDDI_VIEWSET_PHITEXT_MIN),&rectItem);
+
             if ( abs(rectEntryField.bottom - rectItem.bottom) < 20 )
                ShowWindow(GetDlgItem(hwnd,IDDI_VIEWSET_PHITEXT_MIN),SW_HIDE);
             else
                ShowWindow(GetDlgItem(hwnd,IDDI_VIEWSET_PHITEXT_MIN),SW_SHOW);
 
             GetWindowRect(GetDlgItem(hwnd,IDDI_VIEWSET_PHITEXT_MAX),&rectItem);
+
             if ( abs(rectEntryField.bottom - rectItem.bottom) < 20 )
                ShowWindow(GetDlgItem(hwnd,IDDI_VIEWSET_PHITEXT_MAX),SW_HIDE);
             else
@@ -94,7 +95,7 @@
 
             p -> parentPropertySpin -> put_doubleValue(360.0 - (double)pos);
 
- 		      if ( ! holdTextUpdate ) {
+            if ( ! holdTextUpdate ) {
                sprintf(szTemp,"%4.1f",360.0 - (double)pos);
                SetWindowText(GetDlgItem(hwnd,IDDI_VIEWSET_SPINTEXT),szTemp);
             }
@@ -128,7 +129,7 @@
 
          p -> parentPropertyTheta -> put_doubleValue(static_cast<double>(pos));
 
- 		   if ( ! holdTextUpdate ) {
+         if ( ! holdTextUpdate ) {
             sprintf(szTemp,"%5.1f",(double)pos);
           	SetWindowText(GetDlgItem(hwnd,IDDI_VIEWSET_THETATEXT),szTemp);
          }
@@ -158,7 +159,7 @@
       }
 
       break;
- 
+
  
    case WM_COMMAND:
 
@@ -231,7 +232,7 @@
 
       default:
          break;
- 
+
       }
       break;
  

@@ -83,7 +83,7 @@
    dpLabelPosition.y = -DBL_MAX;
    dpLabelPosition.z = -DBL_MAX;
 
-   IUnknown *pIUnknownThis;
+   IUnknown *pIUnknownThis{NULL};
    QueryInterface(IID_IUnknown,reinterpret_cast<void**>(&pIUnknownThis));
 
    CoCreateInstance(CLSID_InnoVisioNateProperties,pIUnknownThis,CLSCTX_INPROC_SERVER | CLSCTX_INPROC_HANDLER,IID_IUnknown,reinterpret_cast<void **>(&pIUnknownProperties));

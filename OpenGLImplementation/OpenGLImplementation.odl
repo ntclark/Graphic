@@ -21,10 +21,10 @@ library OpenGLImplementor {
    importlib(STDTYPE_TLB);
 
    importlib("GSystem.tlb");
-   importlib("DataSet.tlb");
    importlib("Properties.tlb");
    importlib("Variable.tlb");
    importlib("Evaluator.tlb");
+   //importlib("DataSet.tlb");
 
    [  uuid(8CAEFD97-55E6-11d3-8365-006008BD5BC3),
       helpstring("GSystem OpenGLImplementation Interface")
@@ -65,9 +65,15 @@ library OpenGLImplementor {
 
       HRESULT UnSetViewProperties();
 
-      HRESULT Set2D(IDataSet *masterDataset,long margins,char directionRight,char directionUp);
 
-      HRESULT SetUp(IDataSet *masterdataset,
+      // I continue to have issues with the IDataSet interface with midl puking with absolutely no fucking reason
+      // given as to why. 
+      // I note in the DataSet.odl file, the corallary is true, midl pukes trying to decipher this interface
+      // Microsoft, fix your fucking software.
+
+      HRESULT Set2D(/*IDataSet */UINT_PTR masterDataset,long margins,char directionRight,char directionUp);
+
+      HRESULT SetUp(/*IDataSet */UINT_PTR masterdataset,
                      [optional,defaultvalue(0)] IGProperty *pPropPlotView,
                      [optional,defaultvalue(0)] IGProperty *pPropRotationPhi,
                      [optional,defaultvalue(0)] IGProperty *pPropRotationTheta,

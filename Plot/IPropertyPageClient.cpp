@@ -50,8 +50,12 @@
    }
 
 
-
    HRESULT Plot::DestroyPropertyPage(long pageNumber) {
+   return E_NOTIMPL;
+   }
+
+
+   HRESULT Plot::TakePropertySheetDialogs(SAFEARRAY *) {
    return E_NOTIMPL;
    }
 

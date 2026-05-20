@@ -227,9 +227,10 @@
 
       STDMETHOD(UnSetViewProperties)();
 
-      STDMETHOD(Set2D)(IDataSet* dataSet,long margins,char directionRight,char directionUp);
+      // Fuck microsoft, see comments in '.odl file
+      STDMETHOD(Set2D)(/*IDataSet* */UINT_PTR dataSet,long margins,char directionRight,char directionUp);
 
-      STDMETHOD(SetUp)(IDataSet *dataSet,
+      STDMETHOD(SetUp)(/*IDataSet **/UINT_PTR dataSet,
                        IGProperty *pPropPlotView = NULL,
                        IGProperty *pPropRotationTheta = NULL,
                        IGProperty *pPropRotationPhi = NULL,

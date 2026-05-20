@@ -110,8 +110,8 @@
 
    return S_OK;
    }
- 
- 
+
+
    STDMETHODIMP G::RemoveText(IDispatch *pText) {
    IText *t = (IText *)NULL;
    while ( t = textList.GetNext(t) ) {
@@ -126,8 +126,7 @@
    }
    return E_INVALIDARG;
    }
- 
- 
+
 
    STDMETHODIMP G::RemoveAllText() {
    IText *t;

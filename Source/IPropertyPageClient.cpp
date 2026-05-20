@@ -80,6 +80,11 @@
    }
 
 
+   HRESULT G::_IGPropertyPageClient::TakePropertySheetDialogs(SAFEARRAY *) {
+   return E_NOTIMPL;
+   }
+
+
    HRESULT G::_IGPropertyPageClient::GetPropertySheetHeader(void *pv) {
    
    if ( ! pv )

@@ -297,7 +297,7 @@ pIDataSet -> GetDomain(&dpMinGDI,&dpMaxGDI);
 
    if ( partOfMainGraphic ) {
       pIOpenGLImplementation -> Push();
-      pIOpenGLImplementation -> SetUp(pIDataSet);
+      pIOpenGLImplementation -> SetUp(reinterpret_cast<UINT_PTR>(pIDataSet));
       pIBasePlot -> Erase();
       pIOpenGLImplementation -> Pop();
    }
@@ -368,7 +368,7 @@ pIDataSet -> GetDomain(&dpMinGDI,&dpMaxGDI);
 
    renderText();
 
-   pIOpenGLImplementation -> Set2D(pIDataSetWorld,0,'X','Y');
+   pIOpenGLImplementation -> Set2D(reinterpret_cast<UINT_PTR>(pIDataSetWorld),0,'X','Y');
 
    double textMinX,textMaxX,textMinY,textMaxY;
 

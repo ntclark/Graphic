@@ -1,6 +1,6 @@
 /*
 
-                       Copyright (c) 1996,1997,1998,1999,2000,2001,2002 Nathan T. Clark
+                       Copyright (c) 1996,2024 Nathan T. Clark
 
 */
 #include <windows.h>
@@ -209,7 +209,7 @@
 
    pIOpenGLImplementation -> Erase();
 
-   pIOpenGLImplementation -> SetUp(pIDataSet);
+   pIOpenGLImplementation -> SetUp(reinterpret_cast<UINT_PTR>(pIDataSet));
 
    //short drawText[3];
 
@@ -247,7 +247,7 @@
 
    pIOpenGLImplementation -> Finalize();
 
-   fire_ReDraw();
+   //fire_ReDraw();
 
    return 0;
    }

@@ -54,6 +54,12 @@
    return E_NOTIMPL;
    }
 
+
+   HRESULT DataSet::TakePropertySheetDialogs(SAFEARRAY *) {
+   return E_NOTIMPL;
+   }
+
+
    HRESULT DataSet::GetPropertySheetHeader(void *pv) {
    
    if ( ! pv )

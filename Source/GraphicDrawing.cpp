@@ -202,7 +202,7 @@
       p -> pIDataSetMaster -> pushDataPoint(&dpMax);
    }
 
-   p -> pIOpenGLImplementation -> SetUp(p -> pIDataSetMaster);
+   p -> pIOpenGLImplementation -> SetUp(reinterpret_cast<UINT_PTR>(p -> pIDataSetMaster));
 
    IAxis *ax = NULL;
 
@@ -243,7 +243,7 @@
    while ( pIText = p -> textList.GetNext(pIText) ) 
       pIText -> PrepData();
 
-   p -> pIOpenGLImplementation -> SetUp(p -> pIDataSetMaster);
+   p -> pIOpenGLImplementation -> SetUp(reinterpret_cast<UINT_PTR>(p -> pIDataSetMaster));
 
    p -> ActivateLighting();
 

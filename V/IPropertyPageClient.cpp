@@ -110,6 +110,11 @@
    }
 
 
+   HRESULT V::TakePropertySheetDialogs(SAFEARRAY *) {
+   return S_OK;
+   }
+
+
    HRESULT V::GetPropertySheetHeader(void *pv) {
 
    if ( ! pv )

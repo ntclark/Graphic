@@ -45,8 +45,12 @@
    }
 
 
-
    HRESULT Text::DestroyPropertyPage(long pageNumber) {
+   return E_NOTIMPL;
+   }
+
+
+   HRESULT Text::TakePropertySheetDialogs(SAFEARRAY *) {
    return E_NOTIMPL;
    }
 

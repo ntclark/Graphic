@@ -5,7 +5,7 @@
 
 This one is my lifelong passion - or, put another way - something I've been stuck with for what seems like forever !
 
-![text example](http://www.cursivision.com/docs/textExample.png)
+![text example](http://cursivision.com/docs/textExample.png)
 
 I don't know why - but for some reason, Sibelius and Scientific Computer Graphics grabbed my ass sometime in 1980 or so. And, to this date, almost 40 years later, they both still have full control over me.
 
@@ -27,7 +27,7 @@ I would not have put it here unless I am confident it is of real use right now -
 
 And, so, here it is - number graphics - on Windows - in COM - and when I say COM - I mean COM.
 
-![shading example](http://www.cursivision.com/docs/3-DLightingAndShading3.png)
+![shading example](http://cursivision.com/docs/3-DLightingAndShading3.png)
 
 ## How is this software different ?
 ----

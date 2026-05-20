@@ -69,6 +69,7 @@
       STDMETHOD(TranslateAccelerator)(long,long*);
       STDMETHOD(AfterAllPropertyPages)(BOOL);
       STDMETHOD(DestroyPropertyPage)(long);
+      STDMETHOD(TakePropertySheetDialogs)(SAFEARRAY *);
 
       STDMETHOD(GetPropertySheetHeader)(void *pHeader);
       STDMETHOD(get_PropertyPageCount)(long *pCount);

@@ -244,9 +244,9 @@
    Plot *p = (Plot *)pvArg;
 
    if ( p -> overrideOwnerView )
-      p -> pIOpenGLImplementation -> SetUp(p -> pIDataSetDomain,p -> propertyPlotView);
+      p -> pIOpenGLImplementation -> SetUp(reinterpret_cast<UINT_PTR>(p -> pIDataSetDomain),p -> propertyPlotView);
    else
-      p -> pIOpenGLImplementation -> SetUp(p -> pIDataSetDomain,p -> pOwnerPropertyPlotView);
+      p -> pIOpenGLImplementation -> SetUp(reinterpret_cast<UINT_PTR>(p -> pIDataSetDomain),p -> pOwnerPropertyPlotView);
 
    p -> pIGSGraphicServices -> ActivateLighting();
 

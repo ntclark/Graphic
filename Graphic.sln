@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29123.88
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Graphic", "Graphic.vcxproj", "{EE1DA30A-DBA4-4719-AB5F-F01AB28C0524}"
 EndProject
@@ -31,13 +31,20 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Evaluator", "Evaluator\Eval
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "v", "V\v.vcxproj", "{5AAB213B-9936-4ABD-8B81-FFBFA666047C}"
 	ProjectSection(ProjectDependencies) = postProject
-		{F7487200-B128-4F1B-A3E9-8B4B14362C22} = {F7487200-B128-4F1B-A3E9-8B4B14362C22}
 		{7DE741AF-29F3-4644-AA79-A5B01FC0AD88} = {7DE741AF-29F3-4644-AA79-A5B01FC0AD88}
+		{F7487200-B128-4F1B-A3E9-8B4B14362C22} = {F7487200-B128-4F1B-A3E9-8B4B14362C22}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GraphicHost", "GraphicHost\GraphicHost.vcxproj", "{1DA1E819-8557-4429-A26D-E14D9FF85762}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AAD87998-8D9A-49C1-B9A9-47A8D45A9348} = {AAD87998-8D9A-49C1-B9A9-47A8D45A9348}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PlotTypes", "PlotTypes\PlotTypes.vcxproj", "{D0DE0EFD-EF58-433A-BF32-2B1CC0D68EDD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "commonUtilities", "..\Common\commonUtilities\commonUtilities.vcxproj", "{5B99C559-0496-4312-8C0F-68E21EA5C1C7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Properties", "..\Properties\Properties.vcxproj", "{82D353A9-BA4B-4F14-98EB-FA7290DE4B39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -149,6 +156,22 @@ Global
 		{D0DE0EFD-EF58-433A-BF32-2B1CC0D68EDD}.Release|x64.Build.0 = Release|x64
 		{D0DE0EFD-EF58-433A-BF32-2B1CC0D68EDD}.Release|x86.ActiveCfg = Release|Win32
 		{D0DE0EFD-EF58-433A-BF32-2B1CC0D68EDD}.Release|x86.Build.0 = Release|Win32
+		{5B99C559-0496-4312-8C0F-68E21EA5C1C7}.Debug|x64.ActiveCfg = Debug|x64
+		{5B99C559-0496-4312-8C0F-68E21EA5C1C7}.Debug|x64.Build.0 = Debug|x64
+		{5B99C559-0496-4312-8C0F-68E21EA5C1C7}.Debug|x86.ActiveCfg = Debug|Win32
+		{5B99C559-0496-4312-8C0F-68E21EA5C1C7}.Debug|x86.Build.0 = Debug|Win32
+		{5B99C559-0496-4312-8C0F-68E21EA5C1C7}.Release|x64.ActiveCfg = Release|x64
+		{5B99C559-0496-4312-8C0F-68E21EA5C1C7}.Release|x64.Build.0 = Release|x64
+		{5B99C559-0496-4312-8C0F-68E21EA5C1C7}.Release|x86.ActiveCfg = Release|Win32
+		{5B99C559-0496-4312-8C0F-68E21EA5C1C7}.Release|x86.Build.0 = Release|Win32
+		{82D353A9-BA4B-4F14-98EB-FA7290DE4B39}.Debug|x64.ActiveCfg = Debug|x64
+		{82D353A9-BA4B-4F14-98EB-FA7290DE4B39}.Debug|x64.Build.0 = Debug|x64
+		{82D353A9-BA4B-4F14-98EB-FA7290DE4B39}.Debug|x86.ActiveCfg = Debug|Win32
+		{82D353A9-BA4B-4F14-98EB-FA7290DE4B39}.Debug|x86.Build.0 = Debug|Win32
+		{82D353A9-BA4B-4F14-98EB-FA7290DE4B39}.Release|x64.ActiveCfg = Release|x64
+		{82D353A9-BA4B-4F14-98EB-FA7290DE4B39}.Release|x64.Build.0 = Release|x64
+		{82D353A9-BA4B-4F14-98EB-FA7290DE4B39}.Release|x86.ActiveCfg = Release|Win32
+		{82D353A9-BA4B-4F14-98EB-FA7290DE4B39}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

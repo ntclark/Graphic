@@ -28,7 +28,7 @@
       if ( p -> overrideOwnerView ) {
          //p -> propertyPlotView -> get_longValue((long *)&view);
          p -> pIOpenGLImplementation -> Push();
-         p -> pIOpenGLImplementation -> SetUp(p -> pIDataSet,p -> propertyPlotView,NULL,NULL,NULL);//p -> pOwnerPropertyTheta,p -> pOwnerPropertyPhi,p -> pOwnerPropertySpin);
+         p -> pIOpenGLImplementation -> SetUp(reinterpret_cast<UINT_PTR>(p -> pIDataSet),p -> propertyPlotView,NULL,NULL,NULL);//p -> pOwnerPropertyTheta,p -> pOwnerPropertyPhi,p -> pOwnerPropertySpin);
       } //else      
          //p -> pOwnerPropertyPlotView -> get_longValue((long *)&view);
 

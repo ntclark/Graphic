@@ -54,6 +54,7 @@
    HRESULT PlotTypes::_IGPropertyPageClient::TranslateAccelerator(long,long* pResult) { return E_NOTIMPL; }
    HRESULT PlotTypes::_IGPropertyPageClient::AfterAllPropertyPages(BOOL userCanceled) { return E_NOTIMPL; }
    HRESULT PlotTypes::_IGPropertyPageClient::DestroyPropertyPage(long pageNumber) { return E_NOTIMPL; }
+   HRESULT PlotTypes::_IGPropertyPageClient::TakePropertySheetDialogs(SAFEARRAY *) { return E_NOTIMPL; }
 
 
    HRESULT PlotTypes::_IGPropertyPageClient::GetPropertySheetHeader(void *pv) {

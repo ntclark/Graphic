@@ -131,7 +131,8 @@ Sleep(10);
    }
 
 
-   HRESULT OpenGLImplementor::Set2D(IDataSet *id,long m,char dr,char du) {
+   HRESULT OpenGLImplementor::Set2D(/*IDataSet **/UINT_PTR fmsid,long m,char dr,char du) {
+   IDataSet *id = reinterpret_cast<IDataSet *>(fmsid);
    if ( ! plotWindow ) return E_UNEXPECTED;
    strCall_Set2D *pstr = new strCall_Set2D();
    pstr -> iDataSet = id;
@@ -143,7 +144,7 @@ Sleep(10);
    }
 
 
-   HRESULT OpenGLImplementor::SetUp(IDataSet *masterDataSet,
+   HRESULT OpenGLImplementor::SetUp(/*IDataSet **/UINT_PTR fmsmasterDataSet,
                                      IGProperty *pPropPlotView,
                                      IGProperty *pPropRotationTheta,
                                      IGProperty *pPropRotationPhi,
@@ -156,6 +157,7 @@ Sleep(10);
                                      IGProperty *pPropStretchToMargins) {
    if ( ! plotWindow ) 
       return E_UNEXPECTED;
+   IDataSet *masterDataSet = reinterpret_cast<IDataSet *>(fmsmasterDataSet);
    strCall_Setup *pstr = new strCall_Setup();
    pstr -> masterDataSet = masterDataSet;
    pstr -> pPropPlotView = pPropPlotView;
