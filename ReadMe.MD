@@ -37,7 +37,7 @@ Contrast this with more of a script driven system. Yes - you can save the script
 For example, every object on your graphic has properties available simply by double clicking the object. Text objects can be grabbed with the mouse and moved to different locations, soon, this will apply to axis objects as well.
 Data is at your fingertips right in the system. For example, a control panel is created where you manage data sets and functions - two sources of data for plotting. The following figure is a screenshot of the UI.
 
-![UI example](http://www.cursivision.com/docs/FunctionPanel.png)
+![UI example](http://cursivision.com/docs/FunctionPanel.png)
 
 In the figure above - the executable running IS the very small "hosting" application written as an example of how to embed the Graphic object into ANY application. If you are a software developer, note that you can put the inner part of the
 above figure (the "meat of it") in YOUR system in about 2 seconds flat. Note also that having done so, you can also control many aspects about the UI in that system (hide the UI to the left, for example). More about that in the next section.
